@@ -1,0 +1,49 @@
+<h1>Pronouncable Password Generator</h1>
+<%= form_with url: root_path, method: :post do |form| %>
+  <div>
+    <label for="case">Case Option:</label>
+    <%= form.select :case, options_for_select([['Lowercase', 'lowercase'], ['Uppercase', 'uppercase'], ['Mixed', 'mixed'], ['Capitalize', 'capitalize']]) %>
+  </div>
+  <div>
+    <label for="add_non_letter">Add Non-letter Characters:</label>
+    <%= form.check_box :add_non_letter, id: 'add_non_letter' %>
+  </div>
+  <div>
+    <label for="password_length">Password Length:</label>
+    <%= form.number_field :password_length, value: 12, min: 5, max: 12 %>
+  </div>
+  <div id="non-letter-options" style="display: none;">
+    <label for="non_letter_count">Non-letter Count:</label>
+    <%= form.number_field :non_letter_count, value: 1, min: 1, max: 4 %>
+  </div>
+  <div>
+    <%= form.submit "Generate" %>
+  </div>
+<% end %>
+
+<div id="password-output">
+  <p>Your password: <span id="generated-password"><%= @password %></span></p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const nonLetterOptions = document.getElementById('non-letter-options');
+    const addNonLetterCheckbox = document.getElementById('add_non_letter');
+    
+    if (addNonLetterCheckbox) {
+      addNonLetterCheckbox.addEventListener('change', function() {
+        if (addNonLetterCheckbox.checked) {
+          nonLetterOptions.style.display = 'block';
+        } else {
+          nonLetterOptions.style.display = 'none';
+        }
+      });
+
+      if (addNonLetterCheckbox.checked) {
+        nonLetterOptions.style.display = 'block';
+      } else {
+        nonLetterOptions.style.display = 'none';
+      }
+    }
+  });
+</script>

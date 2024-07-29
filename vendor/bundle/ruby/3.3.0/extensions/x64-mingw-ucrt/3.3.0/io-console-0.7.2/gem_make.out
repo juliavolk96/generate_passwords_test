@@ -1,0 +1,25 @@
+current directory: D:/FRONT/Portfolio/test-case/TEST_GENERATE_FORM/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+C:/Ruby33-x64/bin/ruby.exe extconf.rb
+checking for rb_io_path()... yes
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... yes
+checking for rb_io_open_descriptor()... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: D:/FRONT/Portfolio/test-case/TEST_GENERATE_FORM/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240729-9576-mjuxta sitelibdir\=./.gem.20240729-9576-mjuxta clean
+
+current directory: D:/FRONT/Portfolio/test-case/TEST_GENERATE_FORM/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240729-9576-mjuxta sitelibdir\=./.gem.20240729-9576-mjuxta
+generating console-x64-mingw-ucrt.def
+compiling console.c
+linking shared-object io/console.so
+
+current directory: D:/FRONT/Portfolio/test-case/TEST_GENERATE_FORM/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240729-9576-mjuxta sitelibdir\=./.gem.20240729-9576-mjuxta install
+/usr/bin/install -c -m 0755 console.so ./.gem.20240729-9576-mjuxta/io
+
+current directory: D:/FRONT/Portfolio/test-case/TEST_GENERATE_FORM/vendor/bundle/ruby/3.3.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20240729-9576-mjuxta sitelibdir\=./.gem.20240729-9576-mjuxta clean
